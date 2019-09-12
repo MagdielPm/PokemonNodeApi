@@ -1,0 +1,22 @@
+html
+    head    
+        title=titulo
+        link(href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css", rel="stylesheet")
+    body
+        div.container
+            h1=mensaje
+
+            table.table.table-striped
+                td= "Posicion"
+                td= "Nombre"
+                td= "Peso"
+                td= "Altura"
+                td= "Experiencia base"
+                for pokemon in pokemons
+                    tr
+                        td= pokemon.id
+                        td= pokemon.nombre
+                        td= pokemon.peso+" lb"
+                        td= pokemon.altura+" ft"
+                        td= pokemon.experience+" points"
+                        
